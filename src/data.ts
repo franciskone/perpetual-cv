@@ -1,28 +1,48 @@
-import featuristLogo from "@/assets/featurist.svg"
-import kayakoLogo from "@/assets/kayako.svg"
 import smartLogo from "@/assets/smart.webp"
-import tallariumLogo from "@/assets/tallarium.svg"
-import zapnitoLogo from "@/assets/zapnito.svg"
-import britishGasLogo from "@/assets/british-gas.svg"
+import skyscannerLogo from "@/assets/skyscanner.svg"
+import ovoLogo from "@/assets/ovo.svg"
+import eurobetLogo from "@/assets/eurobet.svg"
+import sisalLogo from "@/assets/sisal.svg"
 
-export const data = {
-  name: "Eugenio Depalo",
-  title: "Senior Full-stack Software Engineer",
-  email: "eugeniodepalo@gmail.com",
-  github: "eugeniodepalo",
-  description1: "I love intellectual challenges that just won't let me sleep.",
+type Client = {
+  name: string
+  logo: any
+  url: string
+}
+type Project = {
+  company: string
+  description?: string
+  role: string
+  date: string
+  url?: string
+}
+
+export type Data = {
+  name: string
+  title: string
+  email?: string
+  linkedin?: string
+  github?: string
+  description1: string
+  description2: string
+  clients: Client[]
+  skills: string[]
+  experience: Project[]
+}
+
+export const data: Data = {
+  name: "Francesco Cappelli",
+  title: "Tech Lead / Senior Front End Engineer",
+  github: "franciskone",
+  linkedin: 'https://www.linkedin.com/in/francesco-cappelli/',
+  description1: "I am a passionate Software engineer always looking for improving my own skills to build innovative products using new technologies.",
   description2:
-    "I'm currently based in London. Open to both remote and central London contracting gigs.",
+    "Based in London. Open to both remote and central London contracting gigs.",
   clients: [
     {
-      name: "Featurist",
-      logo: featuristLogo,
-      url: "https://featurist.co.uk",
-    },
-    {
-      name: "Kayako",
-      logo: kayakoLogo,
-      url: "https://kayako.com",
+      name: "Skyscanner",
+      logo: skyscannerLogo,
+      url: "https://skyscanner.net/",
     },
     {
       name: "Smart",
@@ -30,98 +50,86 @@ export const data = {
       url: "https://smart.co",
     },
     {
-      name: "Tallarium",
-      logo: tallariumLogo,
-      url: "https://tallarium.com",
+      name: "OVO energy",
+      logo: ovoLogo,
+      url: "https://www.ovoenergy.com/",
     },
     {
-      name: "Zapnito",
-      logo: zapnitoLogo,
-      url: "https://zapnito.com",
+      name: "Eurobet",
+      logo: eurobetLogo,
+      url: 'https://www.eurobet.it/it/'
     },
     {
-      name: "British Gas",
-      logo: britishGasLogo,
-      url: "https://britishgas.co.uk",
-    },
+      name: "Sisal",
+      logo: sisalLogo,
+      url: 'https://www.sisal.it/'
+    }
   ],
   skills: [
+    "Javascript",
     "TypeScript",
-    "Node.js",
+    "HTML5",
+    "CSS3",
+    "Sass",
+    "Less",
     "React",
-    "Ember",
+    "React Native",
+    "Redux",
+    "Node.js",
     "Next.js",
     "Remix",
-    "PostgreSQL",
     "GraphQL",
     "Apollo",
     "Cypress",
     "Jest",
     "React Testing Library",
-    "Ruby",
-    "Rails",
-    "RSpec",
-    "Rust",
-    "Rocket",
-    "Axum",
-    "Diesel",
     "Docker",
     "AWS",
-    "Terraform",
-    "Ansible",
-    "Unix",
     "MUI",
     "Tailwind",
+    "Chakra UI",
     "Bootstrap",
-    "Elixir",
-    "Phoenix",
-    "Python",
-    "OCaml",
-    "ReasonML",
-    "Bash",
-    "C",
-    "C#",
-    "C++",
-    ".NET",
-    "Cocoa",
-    "Objective-C",
-    "Swift",
   ],
   experience: [
     {
-      company: "Freelance",
-      role: "Senior full-stack developer",
-      date: "2016 - present",
+      company: "Smart Pension",
+      role: "Tech Lead",
+      date: "May 2021 - Now",
     },
     {
-      company: "AlphaSights",
-      role: "Senior front-end developer",
-      date: "2014 - 2016",
-      url: "https://alphasights.com",
+      company: "Skyscanner",
+      role: "Full Stack Engineer",
+      date: "Dec 2019 - Apr 2021",
     },
     {
-      company: "Listora",
-      role: "Front-end developer",
-      date: "2013 - 2014",
+      company: "Ovo energy",
+      role: "Senior Front End Engineer",
+      date: "Set 2019 - Nov 2019",
     },
     {
-      company: "Responsa",
-      role: "Co-founder and lead developer",
-      date: "2012 - 2013",
-      url: "https://responsa.ai",
+      company: "Smart Pension",
+      role: "Front End / Mobile Engineer",
+      date: "Jun 2018 - Aug 2019",
     },
     {
-      company: "H-umus",
-      role: "Junior iOS developer",
-      date: "2011 - 2012",
+      company: "Eurobet",
+      role: "Front End / Mobile Engineer",
+      date: "Oct 2016 - May 2018",
     },
     {
-      company: "Glipper",
-      role: "Open source contributor",
-      date: "2006 - 2008",
-      url: "https://github.com/eugeniodepalo/glipper-lite",
+      company: "Sisal",
+      role: "Front End / Mobile Engineer",
+      date: "Feb 2016 - Sep 2016",
+    },
+    {
+      company: "Freelancer",
+      role: "PHP Developer",
+      date: "Nov 2015 - Jan 2016",
+    },
+    {
+      company: "Freelancer",
+      role: "Wordpress Developer",
+      date: "Sep 2012 - Oct 2015",
     },
   ],
 }
-
-export type Data = typeof data
